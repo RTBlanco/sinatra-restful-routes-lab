@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show</title>
+</head>
+<body>
+  <h1><%= @recipe.name %></h1>
+  <h1><%= @recipe.ingredients %></h1>
+  <h1><%= @recipe.cook_time %></h1>
+  <form action="/recipes/<%= @recipe.id %>" method="POST">
+    <input type="hidden" name="_method" id="hidden" value="DELETE">
+    <input type="submit" value='delete'>
+  </form>
+</body>
+</html>
